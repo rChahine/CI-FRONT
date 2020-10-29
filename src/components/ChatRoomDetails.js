@@ -23,7 +23,7 @@ class ChatRoomDetails extends React.Component {
             {this.props.data.map((value) => {
               return (
                 <tr>
-                  <td>localhost:4567</td>
+                  <td>http://127.0.0.1:4567/</td>
                   <td>{value.name}</td>
                 </tr>
               );
