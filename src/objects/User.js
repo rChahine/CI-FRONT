@@ -1,8 +1,8 @@
 class User {
-  constructor ({ account, currentStatus }) {
-    this.account = account
-    this.currentStatus = currentStatus
+  constructor({ account, currentStatus }) {
+    this.account = account;
+    this.currentStatus = currentStatus;
   }
 }
 
-export default User
+export default User;

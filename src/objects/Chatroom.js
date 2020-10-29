@@ -1,10 +1,7 @@
 class Chatroom {
-    
-    constructor(name) {
-
-        this.name = name
-    }
-
+  constructor(name) {
+    this.name = name;
+  }
 }
 
-export default Chatroom
+export default Chatroom;
