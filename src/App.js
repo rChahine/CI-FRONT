@@ -33,7 +33,7 @@ class App extends React.Component {
 
         <div className="row my-3">
           <div className="col-4">
-            <ChatRoomResume />
+            <ChatRoomResume data={this.state.chatrooms} />
           </div>
           <div className="col-4">
             <UsersResume />
@@ -43,6 +43,7 @@ class App extends React.Component {
         <div className="row">
           <ChatRoomDetails data={this.state.chatrooms} />
         </div>
+
         <div className="row">
           <UsersDetails data={this.state.users} />
         </div>
