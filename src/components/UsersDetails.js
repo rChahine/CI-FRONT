@@ -7,6 +7,7 @@ class UsersDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    console.log(this.props.data);
   }
 
   render() {
@@ -24,18 +25,16 @@ class UsersDetails extends React.Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">http://mescouilles</th>
-              <td>{this.props.data.account.id}</td>
-              <td>{this.props.data.currentStatus}</td>
-              <td>{this.props.data.currentStatus}</td>
-            </tr>
-            <tr>
-              <th scope="row">http://mescouilles</th>
-              <td>0</td>
-              <td>toto</td>
-              <td>INACTIVE</td>
-            </tr>
+            {this.props.data.map((value) => {
+              return (
+                <tr>
+                  <th scope="row">https://127.0.0.1</th>
+                  <td>{value.account.id}</td>
+                  <td>{value.account.username}</td>
+                  <td>{value.currentStatus}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
