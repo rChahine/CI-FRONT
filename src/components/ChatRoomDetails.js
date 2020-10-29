@@ -11,9 +11,9 @@ class ChatRoomDetails extends React.Component {
 
   render() {
     return (
-      <div className="col">
-        <h2>List of actives Chatrooms</h2>
-        <table className="table table-striped">
+      <div className="col DTdiv card">
+        <h2>Chatrooms</h2>
+        <table className="table table-striped DTdiv">
           <thead>
             <tr>
               <td>Server</td>

@@ -12,23 +12,22 @@ class UsersDetails extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Users</h1>
-
-        <table className="table">
+      <div className="col DTdiv card">
+        <h2>Users</h2>
+        <table className="table table-striped DTdiv">
           <thead>
             <tr>
-              <th scope="col">Server</th>
-              <th scope="col">User ID</th>
-              <th scope="col">Username</th>
-              <th scope="col">Status</th>
+              <td>Server</td>
+              <td>User ID</td>
+              <td>Username</td>
+              <td>Status</td>
             </tr>
           </thead>
           <tbody>
             {this.props.data.map((value) => {
               return (
                 <tr>
-                  <th scope="row">https://127.0.0.1</th>
+                  <td>https://127.0.0.1</td>
                   <td>{value.account.id}</td>
                   <td>{value.account.username}</td>
                   <td>{value.currentStatus}</td>
