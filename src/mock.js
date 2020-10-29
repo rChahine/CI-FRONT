@@ -192,7 +192,7 @@ export const CHATROOMS = [
   },
   {
     name: 'Fitzpatrick',
-  },
+  } /*
   {
     name: 'Stephens',
   },
@@ -246,5 +246,5 @@ export const CHATROOMS = [
   },
   {
     name: 'Burt',
-  },
+  }, */,
 ];

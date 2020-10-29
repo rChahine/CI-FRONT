@@ -28,24 +28,24 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>CI-FRONT</h1>
+      <div className="App container">
+        <h1 className="my-3">CI-FRONT</h1>
 
-        <div className="row">
-          <div className="col">
+        <div className="row my-3">
+          <div className="col-4">
             <ChatRoomResume />
           </div>
-          <div className="col">
+          <div className="col-4">
             <UsersResume />
           </div>
         </div>
 
         <div className="row">
-          <div className="col" />
-          <div className="col" />
+          <ChatRoomDetails data={this.state.chatrooms} />
         </div>
-        <ChatRoomDetails data={this.state.chatrooms} />
-        <UsersDetails data={this.state.users} />
+        <div className="row">
+          <UsersDetails data={this.state.users} />
+        </div>
       </div>
     );
   }

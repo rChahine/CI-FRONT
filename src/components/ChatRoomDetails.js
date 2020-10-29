@@ -10,10 +10,26 @@ class ChatRoomDetails extends React.Component {
 
   render() {
     return (
-      <div className="row">
-        {this.props.data.map((value) => {
-          return <div key={value.id}>{value.name}</div>;
-        })}
+      <div className="col">
+        <h2>List of actives Chatrooms</h2>
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <td>Server</td>
+              <td>Chatrooms name</td>
+            </tr>
+          </thead>
+          <tbody>
+            {this.props.data.map((value) => {
+              return (
+                <tr>
+                  <td>localhost:4567</td>
+                  <td>{value.name}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     );
   }
