@@ -3,8 +3,6 @@ import React from 'react';
 import ChatRoomDetails from './components/ChatRoomDetails';
 import UsersDetails from './components/UsersDetails';
 import { USERS, CHATROOMS } from './mock';
-import Chatroom from '../objects/Chatroom';
-import User from '../objects/User';
 
 import './App.css';
 
@@ -19,8 +17,8 @@ class App extends React.Component {
 
   componentDidMount() {
     this.setState({
-      users: this.formatData(USERS, User),
-      chatrooms: this.formatData(CHATROOMS, Chatroom),
+      users: USERS,
+      chatrooms: CHATROOMS,
     });
   }
 
