@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class ChatRoomDetails extends React.Component {
+class UsersDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -17,12 +17,12 @@ class ChatRoomDetails extends React.Component {
   }
 }
 
-ChatRoomDetails.propTypes = {
+UsersDetails.propTypes = {
   data: PropTypes.arrayOf(Object),
 };
 
-ChatRoomDetails.defaultProps = {
+UsersDetails.defaultProps = {
   data: [],
 };
 
-export default ChatRoomDetails;
+export default UsersDetails;
