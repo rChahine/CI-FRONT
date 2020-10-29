@@ -10,8 +10,10 @@ class ChatRoomDetails extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>test</p>
+      <div className="row">
+        {this.props.data.map((value) => {
+          return <div key={value.id}>{value.name}</div>;
+        })}
       </div>
     );
   }
