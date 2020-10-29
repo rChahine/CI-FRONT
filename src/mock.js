@@ -1,4 +1,4 @@
-const USERS = [
+export const USERS = [
   {
     account: {
       id: 6,
@@ -183,7 +183,7 @@ const USERS = [
   },
 ];
 
-const CHATROOMS = [
+export const CHATROOMS = [
   {
     name: 'Michael',
   },
@@ -248,5 +248,3 @@ const CHATROOMS = [
     name: 'Burt',
   },
 ];
-
-export default { USERS, CHATROOMS };
