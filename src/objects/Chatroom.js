@@ -1,5 +1,5 @@
 class Chatroom {
-  constructor(name) {
+  constructor({ name }) {
     this.name = name;
   }
 }
