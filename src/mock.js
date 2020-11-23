@@ -19,7 +19,7 @@ export const USERS = [
       username: 'Nina',
     },
     currentStatus: 'INACTIVE',
-  },
+  } /*
   {
     account: {
       id: 4,
@@ -180,7 +180,7 @@ export const USERS = [
       username: 'Teresa',
     },
     currentStatus: 'INACTIVE',
-  },
+  }, */,
 ];
 
 export const CHATROOMS = [

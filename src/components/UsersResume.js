@@ -8,6 +8,6 @@ export default class UsersResume extends React.Component {
   }
 
   render() {
-    return <div className="card">Actives users</div>;
+    return <div className="card DTdiv">Actives users</div>;
   }
 }

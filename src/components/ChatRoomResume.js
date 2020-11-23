@@ -12,7 +12,7 @@ class ChatRoomResume extends React.Component {
 
   render() {
     return (
-      <div className="card">
+      <div className="card DTdiv">
         <div className="card-body">Actives Chatrooms</div>
         <p className="card-text">
           There is {this.props.data.length} actives chatrooms.
