@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable react/no-is-mounted */
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/destructuring-assignment */
 
@@ -9,30 +11,32 @@ class UsersResume extends React.Component {
     super(props);
 
     this.state = { nb: 0, servers: [] };
-    this.data = props.data;
   }
 
   componentDidMount() {
-    let nb = 0;
-
-    this.data.forEach((elem) => {
-      nb += elem.chatrooms.length;
+    this.props.data.forEach((elem) => {
+      this.setState((previousState) => ({ nb: previousState.nb + elem.users.length }));
       this.state.servers.push(elem.server);
     });
-
-    this.setState({ nb });
   }
 
   render() {
+    console.log('render');
     return (
       <div className="card DTdiv">
         <div className="card-body">Actives Users</div>
-        <p className="card-text">
+        <div className="card-text">
           There is {this.state.nb} actives users.
           <br />
           <small>On servers : </small>
-          {this.state.nb > 0 ? this.state.servers.map((value) => <p>{value}</p>) : <div />}
-        </p>
+          {this.state.nb > 0 ? (
+            this.state.servers.map((value) => (
+              <p key={Math.ceil(Math.floor(Math.random() * Math.floor(15)))}>{value}</p>
+            ))
+          ) : (
+            <div />
+          )}
+        </div>
       </div>
     );
   }

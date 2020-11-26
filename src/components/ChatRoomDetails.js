@@ -24,8 +24,8 @@ class ChatRoomDetails extends React.Component {
             {this.props.data.map((server) => {
               return server.chatrooms.map((chatroom) => {
                 return (
-                  <tr>
-                    <td>{server}</td>
+                  <tr key={Math.ceil(Math.floor(Math.random() * Math.floor(15)))}>
+                    <td>{server.server}</td>
                     <td>{chatroom}</td>
                   </tr>
                 );

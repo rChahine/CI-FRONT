@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-indent */
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
@@ -25,12 +26,16 @@ class ChatRoomResume extends React.Component {
     return (
       <div className="card DTdiv">
         <div className="card-body">Actives Chatrooms</div>
-        <p className="card-text">
+        <div className="card-text">
           There is {this.state.nb} actives chatrooms.
           <br />
           <small>On servers : </small>
-          {this.state.nb > 0 ? this.state.servers.map((value) => <p>{value}</p>) : <div />}
-        </p>
+          {this.state.nb > 0
+            ? this.state.servers.map((value) => (
+                <p key={Math.ceil(Math.floor(Math.random() * Math.floor(15)))}>{value}</p>
+              ))
+            : null}
+        </div>
       </div>
     );
   }

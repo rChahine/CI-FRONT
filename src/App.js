@@ -19,12 +19,18 @@ class App extends React.Component {
   }
 
   async componentDidMount() {
-    this.setState({ users: await getUsers(), chatrooms: await getChatrooms() });
+    this.setState({
+      users: await getUsers(),
+      chatrooms: await getChatrooms(),
+    });
 
     // Rechargement de données toute les 2 min
     setInterval(async () => {
-      this.setState({ users: await getUsers(), chatrooms: await getChatrooms() });
-    }, 120000);
+      this.setState({
+        users: await getUsers(),
+        chatrooms: await getChatrooms(),
+      });
+    }, 12000);
   }
 
   render() {

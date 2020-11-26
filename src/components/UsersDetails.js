@@ -28,7 +28,7 @@ class UsersDetails extends React.Component {
             {this.props.data.map((value) => {
               return value.users.map((user) => {
                 return (
-                  <tr>
+                  <tr key={Math.ceil(Math.floor(Math.random() * Math.floor(15)))}>
                     <td>{value.server}</td>
                     <td>{user.account.id}</td>
                     <td>{user.account.username}</td>
