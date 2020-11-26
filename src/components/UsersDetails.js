@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unused-prop-types */
 /* eslint-disable react/destructuring-assignment */
+/* eslint-disable no-console */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -7,7 +9,6 @@ class UsersDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    console.log(this.props.data);
   }
 
   render() {
@@ -25,14 +26,16 @@ class UsersDetails extends React.Component {
           </thead>
           <tbody>
             {this.props.data.map((value) => {
-              return (
-                <tr>
-                  <td>https://127.0.0.1</td>
-                  <td>{value.account.id}</td>
-                  <td>{value.account.username}</td>
-                  <td>{value.currentStatus}</td>
-                </tr>
-              );
+              return value.users.map((user) => {
+                return (
+                  <tr>
+                    <td>{value.server}</td>
+                    <td>{user.account.id}</td>
+                    <td>{user.account.username}</td>
+                    <td>{user.currentStatus}</td>
+                  </tr>
+                );
+              });
             })}
           </tbody>
         </table>

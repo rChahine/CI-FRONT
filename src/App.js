@@ -1,12 +1,11 @@
 /* eslint-disable react/destructuring-assignment */
-import React from 'react';
 
+import React from 'react';
 import ChatRoomDetails from './components/ChatRoomDetails';
 import UsersDetails from './components/UsersDetails';
 import UsersResume from './components/UsersResume';
 import ChatRoomResume from './components/ChatRoomResume';
-
-import { USERS, CHATROOMS } from './mock';
+import { getUsers, getChatrooms } from './service/requests';
 
 import './App.css';
 
@@ -19,11 +18,13 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.setState({
-      users: USERS,
-      chatrooms: CHATROOMS,
-    });
+  async componentDidMount() {
+    this.setState({ users: await getUsers(), chatrooms: await getChatrooms() });
+
+    // Rechargement de données toute les 2 min
+    setInterval(async () => {
+      this.setState({ users: await getUsers(), chatrooms: await getChatrooms() });
+    }, 120000);
   }
 
   render() {
@@ -36,7 +37,7 @@ class App extends React.Component {
             <ChatRoomResume data={this.state.chatrooms} />
           </div>
           <div className="col-4">
-            <UsersResume />
+            <UsersResume data={this.state.users} />
           </div>
         </div>
 

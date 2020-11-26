@@ -7,7 +7,18 @@ class ChatRoomResume extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = { nb: 0, servers: [] };
+  }
+
+  componentDidMount() {
+    let nb = 0;
+
+    this.props.data.forEach((elem) => {
+      nb += elem.chatrooms.length;
+      this.state.servers.push(elem.server);
+    });
+
+    this.setState({ nb });
   }
 
   render() {
@@ -15,9 +26,10 @@ class ChatRoomResume extends React.Component {
       <div className="card DTdiv">
         <div className="card-body">Actives Chatrooms</div>
         <p className="card-text">
-          There is {this.props.data.length} actives chatrooms.
+          There is {this.state.nb} actives chatrooms.
           <br />
-          http://127.0.0.1:4567/
+          <small>On servers : </small>
+          {this.state.nb > 0 ? this.state.servers.map((value) => <p>{value}</p>) : <div />}
         </p>
       </div>
     );

@@ -21,13 +21,15 @@ class ChatRoomDetails extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.data.map((value) => {
-              return (
-                <tr>
-                  <td>localhost:4567</td>
-                  <td>{value.name}</td>
-                </tr>
-              );
+            {this.props.data.map((server) => {
+              return server.chatrooms.map((chatroom) => {
+                return (
+                  <tr>
+                    <td>{server}</td>
+                    <td>{chatroom}</td>
+                  </tr>
+                );
+              });
             })}
           </tbody>
         </table>
