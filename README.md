@@ -12,7 +12,7 @@ Every minutes, the application will fetch data from each servers mentionned in "
 
 Each servers must be started from back-end java application
 
-If you want to create fetch users or chatrooms, you must run the client side of java application and log in, then you can create new chatrooms
+If you want to fetch users or chatrooms, you must run the client side of java application and log in, then you can create new chatrooms
 
 ## How to run test suite
 
