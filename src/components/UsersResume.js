@@ -21,7 +21,6 @@ class UsersResume extends React.Component {
   }
 
   render() {
-    console.log('render');
     return (
       <div className="card DTdiv">
         <div className="card-body">Actives Users</div>
