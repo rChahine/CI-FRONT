@@ -30,7 +30,7 @@ class App extends React.Component {
         users: await getUsers(),
         chatrooms: await getChatrooms(),
       });
-    }, 12000);
+    }, 60000);
   }
 
   render() {
